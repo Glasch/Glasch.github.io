@@ -1,13 +1,26 @@
-//config
 
+//cofnig
 @import "config/_variables.scss";
+@import "config/_media.scss";
 @import "config/_mixins.scss";
 
-// base
+
+//layout
 @import "layout/_fonts.scss";
 @import "layout/_base.scss";
 @import "layout/_adjustment.scss";
 
-// section
-@import "section/_hero.scss";
-@import "section/_best.scss";
+//sections
+@import "sections/_hero.scss";
+@import "sections/_best.scss";
+@import "sections/_burgers.scss";
+@import "sections/_team.scss";
+@import "sections/_menu.scss";
+@import "sections/_reviews.scss";
+@import "sections/_order.scss";
+@import "sections/_contacts.scss";
+@import "sections/_scroll.scss";
+@import "sections/_SVG.scss";
+@import "sections/_fullscreen-menu.scss";
+@import "sections/_review-modal.scss";
+

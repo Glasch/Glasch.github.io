@@ -1,0 +1,222 @@
+.order {
+    background: url('../img/bg/7_slide_bg.jpg') no-repeat; 
+    background-size: cover; 
+    background-position: 50%;
+    position: relative;
+}
+.form__container {
+        @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px 0;
+        }
+    @include phones {
+    padding-top: 45px;
+    }
+}
+.form {
+    display: flex;   
+    color: white;
+    @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;   
+    max-width: 475px; 
+    width: 100%;
+    }
+    @include phones {
+    padding: rem(0px);
+    }
+}
+.form__label {
+    display: block;
+    flex: 1;
+}
+.form__label-title {
+    @include ubuntu($style: light);
+    width: 100%;
+    font-size: rem(14px);
+    padding: 0;
+    margin-bottom: rem(5px);
+    text-align: left
+}
+.form__input {
+    @include ubuntu($style: light);
+    width: 100%;
+    font-size: rem(14px);
+    background: white;
+    border-radius: rem(7px);
+    border: 0;
+    padding: rem(10px);
+    border: 2px solid transparent;
+    &:focus {
+    border: 2px solid #f9b43b;
+    outline: none;
+    }
+    
+}
+.section__title-order{
+    margin-top: rem(-100px);
+    margin-bottom: rem(65px);
+           @include tablets {
+                margin-top: 0;
+                margin-bottom: rem(75px);
+           }
+    @include phones {
+    padding: rem(0px);
+    font-size: 50px;
+    margin-bottom: rem(30px);
+    }
+}
+
+
+.form__row {
+    display: flex;   
+    margin-top: rem(14px);
+    &:first-child {
+        margin-top: 0;
+    }
+}
+.form__cell {
+    display: block;
+    flex: 1;
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.form__column {
+    width: 50%;
+    padding: 0;
+    margin-right: rem(20px);
+      @include tablets {
+  width: 100%;
+  margin-bottom: 20px;
+      }
+}
+.form__textarea {
+    resize: none;
+    height: rem(120px);
+}
+.form__row-control {
+    margin-top: rem(10px);
+        @include phones {
+    justify-content: center;
+        }
+}
+.form__control {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    margin-bottom: rem(15px);
+}
+.form__radio {
+    display: inline-flex;
+    align-items: center;
+    margin-right: rem(15px);
+   }
+.form__radio-elem {
+    display: none;
+}
+.form__radio-fake {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: relative;
+    background:white;
+    vertical-align: middle;
+    cursor: pointer;
+    &:after {
+    content: "";
+    display: none;
+    width: 7px;
+    height: 7px;
+    background: $darker-orange;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(70%, 70%);
+}
+}
+.none {
+    @include phones {
+    display: none;
+        }
+}
+.form__radio-elem:checked + .form__radio-fake:after {
+    display: block;  
+}
+.form__checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(15px);
+          @include tablets {
+    margin-bottom: 20px;
+          }
+}
+.form__control-text {
+    display: block;
+    font-size: rem(14px);
+    margin-left: rem(10px);
+    
+}
+.form__checkbox-elem {
+    display: none;
+}
+
+.form__checkbox-fake {
+    display: inline-block;
+    width: rem(15px);
+    height: rem(15px);
+    position: relative;
+    background:white;
+    vertical-align: middle;
+    cursor: pointer;
+    &:after {
+    display: none;
+    content: "";
+    width: rem(6px);
+    height: rem(10px);
+    border: rem(3px) solid $dark;
+    border-top: none;
+    border-left: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(80%, 15%) rotate(45deg);
+    }  
+    &:checked:after{
+  
+}
+}
+.form__checkbox-elem:checked + .form__checkbox-fake:after {
+    display: block;
+    border-color:  $darker-orange;
+}
+.form__buttons {
+    display: inline-flex;
+    align-items: baseline;
+}
+.form_link-clear {
+    text-decoration: none;
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.42;
+    color: white;
+    margin-left: rem(15px);
+}
+.reset {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: white;
+    margin-left: 20px;
+}

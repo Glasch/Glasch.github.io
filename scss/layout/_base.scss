@@ -1,13 +1,19 @@
+html {
+  @include tablets {
+    font-size: 15px;
+  }
+    @include phones {
+    font-size: 15px;
+  }
+}
+
+
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
   line-height: 1.42;
   color: $dark;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
 }
 
 *, *::before, *::after { 
@@ -18,18 +24,12 @@ body, html {
   height: 100%;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.visuallyhidden {
+.visuallyhidden:not(:focus):not(:active) {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1px);
+  height: rem(1px);
+  margin: -rem(1px);
   border: 0;
   padding: 0;
 
@@ -38,4 +38,10 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
